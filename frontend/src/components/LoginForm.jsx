@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../constants";
 
 const Label = ({ text }) => {
   return (
@@ -18,8 +19,6 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
-  const BASE_URL = "http://localhost:5000/api/v1";
 
   const switchToSignUpForm = () => {
     if (login === "login") {
